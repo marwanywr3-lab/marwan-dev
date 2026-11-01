@@ -1,7 +1,7 @@
 'use strict';
 const translations = {
-  en: {skip:'Skip to content',work:'Work',about:'About',intro:'DEVELOPER · CURIOUS BY NATURE',headline1:'Small details.',headline2:'Thoughtful experiences.',bio:"I'm Marwan, a developer turning curiosity into simple, useful digital experiences. I care about clean interfaces, fast websites, and the details that make them feel right.",view:'Explore my work',signature:'Built with care. Made to be useful.',selected:'IDEAS INTO INTERFACES',projects:'Selected work',behind:'BEHIND THE CODE',aboutTitle:'Always learning.\nAlways building.',aboutCopy:"I'm Marwan Barbood. I enjoy exploring how the web works and bringing ideas to life through code. My approach is simple: start with a clear purpose, focus on the essentials, and keep improving.",aboutEnd:'This portfolio is a growing collection of that journey.',simple:'Simplicity',care:'Attention to detail',curiosity:'Curiosity',name:'Marwan Barbood',top:'Back to top ↑',loading:'Loading projects…',empty:'New work is on the way. Check back soon.',error:'Projects could not be loaded. Please try again.',retry:'Try again ↗',demo:'Visit project ↗',source:'Source code ↗',nav:'Main navigation',title:'Marwan Barbood — Developer'},
-  ar: {skip:'انتقل إلى المحتوى',work:'المشاريع',about:'عني',intro:'مطوّر · يقودني الفضول',headline1:'تفاصيل صغيرة.',headline2:'تجارب مدروسة.',bio:'أنا مروان، مطوّر أحوّل فضولي إلى تجارب رقمية بسيطة ومفيدة. أهتم بالواجهات الواضحة، والمواقع السريعة، والتفاصيل التي تجعل استخدامها أجمل.',view:'استكشف مشاريعي',signature:'صُنع بعناية. ليكون مفيدًا.',selected:'من الأفكار إلى الواجهات',projects:'مشاريع مختارة',behind:'خلف الكود',aboutTitle:'أتعلّم باستمرار.\nوأبني بشغف.',aboutCopy:'أنا مروان باربود. أستمتع باستكشاف كيفية عمل الويب وتحويل الأفكار إلى واقع عبر البرمجة. أسلوبي بسيط: أبدأ بهدف واضح، وأركّز على الأساسيات، وأواصل التحسين.',aboutEnd:'هذا الموقع مجموعة متجددة من محطات رحلتي.',simple:'البساطة',care:'الاهتمام بالتفاصيل',curiosity:'الفضول',name:'مروان باربود',top:'العودة للأعلى ↑',loading:'جارٍ تحميل المشاريع…',empty:'مشاريع جديدة في الطريق. عُد قريبًا.',error:'تعذّر تحميل المشاريع. حاول مرة أخرى.',retry:'حاول مجددًا ↗',demo:'زيارة المشروع ↗',source:'الكود المصدري ↗',nav:'القائمة الرئيسية',title:'مروان باربود — مطوّر'}
+  en: {contactNav:'Contact',contactLabel:'A CONVERSATION STARTS HERE',contactTitle:'Have an idea? Say hello.',contactCopy:'A question, an idea, or just a hello. My inbox is open.',skip:'Skip to content',work:'Work',about:'About',intro:'DEVELOPER · CURIOUS BY NATURE',headline1:'Simple ideas.',headline2:'Beautifully built.',bio:"I'm Marwan, a developer turning curiosity into simple, useful digital experiences. I care about clean interfaces, fast websites, and the details that make them feel right.",view:'Explore my work',signature:'Built with care. Made to be useful.',selected:'IDEAS INTO INTERFACES',projects:'Selected work',behind:'BEHIND THE CODE',aboutTitle:'Always learning.\nAlways building.',aboutCopy:"I'm Marwan Barbood. I enjoy exploring how the web works and bringing ideas to life through code. My approach is simple: start with a clear purpose, focus on the essentials, and keep improving.",aboutEnd:'This portfolio is a growing collection of that journey.',simple:'Simplicity',care:'Attention to detail',curiosity:'Curiosity',name:'Marwan Barbood',top:'Back to top ↑',loading:'Loading projects…',empty:'New work is on the way. Check back soon.',error:'Projects could not be loaded. Please try again.',retry:'Try again ↗',demo:'Visit project ↗',source:'Source code ↗',nav:'Main navigation',title:'Marwan Barbood — Developer'},
+  ar: {contactNav:'تواصل',contactLabel:'لنبدأ حديثًا',contactTitle:'عندك فكرة؟ خلّنا نتواصل.',contactCopy:'سؤال، فكرة، أو حتى سلام. يسعدني أسمع منك.',skip:'انتقل إلى المحتوى',work:'المشاريع',about:'عني',intro:'مطوّر · يقودني الفضول',headline1:'أفكار بسيطة.',headline2:'بتفاصيل أجمل.',bio:'أنا مروان، مطوّر أحوّل فضولي إلى تجارب رقمية بسيطة ومفيدة. أهتم بالواجهات الواضحة، والمواقع السريعة، والتفاصيل التي تجعل استخدامها أجمل.',view:'استكشف مشاريعي',signature:'صُنع بعناية. ليكون مفيدًا.',selected:'من الأفكار إلى الواجهات',projects:'مشاريع مختارة',behind:'خلف الكود',aboutTitle:'أتعلّم باستمرار.\nوأبني بشغف.',aboutCopy:'أنا مروان باربود. أستمتع باستكشاف كيفية عمل الويب وتحويل الأفكار إلى واقع عبر البرمجة. أسلوبي بسيط: أبدأ بهدف واضح، وأركّز على الأساسيات، وأواصل التحسين.',aboutEnd:'هذا الموقع مجموعة متجددة من محطات رحلتي.',simple:'البساطة',care:'الاهتمام بالتفاصيل',curiosity:'الفضول',name:'مروان باربود',top:'العودة للأعلى ↑',loading:'جارٍ تحميل المشاريع…',empty:'مشاريع جديدة في الطريق. عُد قريبًا.',error:'تعذّر تحميل المشاريع. حاول مرة أخرى.',retry:'حاول مجددًا ↗',demo:'زيارة المشروع ↗',source:'الكود المصدري ↗',nav:'القائمة الرئيسية',title:'مروان باربود — مطوّر'}
 };
 let language = 'en';
 try { language = localStorage.getItem('portfolio-language') === 'ar' ? 'ar' : 'en'; } catch {}
@@ -22,14 +22,15 @@ function renderProjects() {
   for (const [index, project] of projects.entries()) {
     const card = node('article', '', 'project-card');
     card.append(node('span', String(index + 1).padStart(2, '0'), 'number'), node('h3', text(project.title)), node('p', text(project.description)));
-    const tags = node('ul', '', 'tags');
-    for (const tech of project.stack) { const tag = node('li', tech); tag.dir = 'auto'; tags.append(tag); }
+
     const links = node('div', '', 'project-links');
     for (const [key, label] of [['url', 'demo'], ['source', 'source']]) {
       const url = safeURL(project[key]);
       if (url) { const a = node('a', translations[language][label]); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.setAttribute('aria-label', `${translations[language][label]} — ${text(project.title)}`); links.append(a); }
     }
-    card.append(tags, links); list.append(card);
+    const imageURL=safeURL(project.image);
+    if(imageURL){const image=document.createElement('img');image.src=imageURL;image.alt=text(project.title);image.loading='lazy';image.decoding='async';image.width=1200;image.height=750;image.className='project-image';card.prepend(image);}else{const art=node('div','','project-art');art.setAttribute('aria-hidden','true');art.append(node('span',text(project.title).trim().slice(0,1)||'m'));card.prepend(art);}
+    card.append(links); list.append(card);
   }
 }
 function setLanguage(next) {
@@ -53,7 +54,7 @@ async function loadProjects() {
     const response = await fetch('https://marwan-portfolio-admin.barboodmarwan.workers.dev/projects.json', {signal:controller.signal, cache:'no-cache'});
     if (!response.ok) throw new Error('Request failed');
     const data = await response.json();
-    if (!Array.isArray(data.projects) || data.projects.length > 100 || !data.projects.every(p => p && localized(p.title) && localized(p.description) && Array.isArray(p.stack) && p.stack.every(t => typeof t === 'string'))) throw new Error('Invalid project data');
+    if (!Array.isArray(data.projects) || data.projects.length > 100 || !data.projects.every(p => p && localized(p.title) && localized(p.description))) throw new Error('Invalid project data');
     projects = data.projects; state = 'ready';
   } catch { state = 'error'; }
   finally { clearTimeout(timeout); loading = false; renderProjects(); }
