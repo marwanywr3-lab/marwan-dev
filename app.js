@@ -50,7 +50,7 @@ async function loadProjects() {
   loading = true; state = 'loading'; projects = []; renderProjects();
   const controller = new AbortController(); const timeout = setTimeout(() => controller.abort(), 10000);
   try {
-    const response = await fetch('./projects.json', {signal:controller.signal, cache:'no-cache'});
+    const response = await fetch('https://marwan-portfolio-admin.barboodmarwan.workers.dev/projects.json', {signal:controller.signal, cache:'no-cache'});
     if (!response.ok) throw new Error('Request failed');
     const data = await response.json();
     if (!Array.isArray(data.projects) || data.projects.length > 100 || !data.projects.every(p => p && localized(p.title) && localized(p.description) && Array.isArray(p.stack) && p.stack.every(t => typeof t === 'string'))) throw new Error('Invalid project data');
