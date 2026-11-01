@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Marwan Barbood — developer building thoughtful digital experiences with simplicity and purpose.">
+  <title>Marwan Barbood — Developer</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#" aria-label="Marwan Barbood"><span class="monogram" aria-hidden="true">m.</span><span>Marwan Barbood<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation" id="navigation">
+      <a href="#projects" data-i18n="work">Work</a><a href="#about" data-i18n="about">About</a>
+      <button id="language" type="button" lang="ar" aria-label="Switch to Arabic">العربية <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="intro">DEVELOPER · CURIOUS BY NATURE</span></p>
+      <h1 id="hero-title"><span data-i18n="headline1">Small details.</span><br><span class="muted" data-i18n="headline2">Thoughtful experiences.</span></h1>
+      <p class="hero-copy" data-i18n="bio">I'm Marwan, a developer turning curiosity into simple, useful digital experiences. I care about clean interfaces, fast websites, and the details that make them feel right.</p>
+      <a class="button" href="#projects"><span data-i18n="view">Explore my work</span><span aria-hidden="true">↓</span></a>
+      <div class="hero-bottom"><span data-i18n="signature">Built with care. Made to be useful.</span><span class="index-mark" aria-hidden="true">01 — PORTFOLIO</span></div>
+    </section>
+    <section class="projects wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-top"><div><p class="eyebrow" data-i18n="selected">IDEAS INTO INTERFACES</p><h2 id="projects-title" data-i18n="projects">Selected work</h2></div><span class="section-number" aria-hidden="true">01 /</span></div>
+      <p id="project-status" class="project-status" role="status" aria-live="polite">Loading projects…</p>
+      <button id="retry" class="text-button" type="button" hidden data-i18n="retry">Try again ↗</button>
+      <div id="project-list" class="project-grid" aria-busy="true"></div>
+      <noscript>Enable JavaScript to load projects. / فعّل JavaScript لعرض المشاريع.</noscript>
+    </section>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div><p class="eyebrow" data-i18n="behind">BEHIND THE CODE</p><h2 id="about-title" data-i18n="aboutTitle">Always learning.<br>Always building.</h2></div>
+      <div class="about-copy"><p data-i18n="aboutCopy">I'm Marwan Barbood. I enjoy exploring how the web works and bringing ideas to life through code. My approach is simple: start with a clear purpose, focus on the essentials, and keep improving.</p><p class="muted" data-i18n="aboutEnd">This portfolio is a growing collection of that journey.</p><div class="principles"><span data-i18n="simple">Simplicity</span><span data-i18n="care">Attention to detail</span><span data-i18n="curiosity">Curiosity</span></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> <span data-i18n="name">Marwan Barbood</span></span><a href="#" data-i18n="top">Back to top ↑</a></footer>
+</body>
+</html>
